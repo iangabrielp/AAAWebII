@@ -10,4 +10,11 @@ import { RouterModule } from '@angular/router';
 })
 export class NavComponent {
 
+  autenticacion():boolean{
+    if(typeof window!=='undefined' && window.localStorage){
+    return localStorage.getItem('login')==='true';
+  }
+  return false;
+
+}
 }
